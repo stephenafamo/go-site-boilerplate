@@ -1,10 +1,11 @@
 package main
 
 import (
-    "net/http"
+	"net/http"
 )
 
 func main() {
-	http.Handle("/", routes())
-    http.ListenAndServe(":80", nil)
+	router := customRouter()
+	http.Handle("/", routes(router))
+	http.ListenAndServe(":80", nil)
 }

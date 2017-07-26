@@ -13,4 +13,3 @@ docker run -d -t \
     -v "$PWD"/src:/go/src/github.com/"$app" \
     -w /go/src/github.com/"$app" \
     $app
-    # -v "$PWD"/log:/var/log/http \

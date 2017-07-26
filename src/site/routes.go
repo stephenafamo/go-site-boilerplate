@@ -1,10 +1,11 @@
 package main
 
-func routes() *stephenRouter {
-	router := customRouter()
-	
+func routes(router *stephenRouter) *stephenRouter {
+
 	router.handler("/", "IndexController", "Index")
 	router.handler("/index", "IndexController", "Index")
-    router.handler("/{Title}/{Name}", "IndexController", "Index")
-    return router
-}	
+	router.handler("/{Title}/{Name}", "IndexController", "Index")
+	router.handler("/asset/", "AssetController", "Index")
+
+	return router
+}

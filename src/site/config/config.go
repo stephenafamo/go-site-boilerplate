@@ -1,7 +1,7 @@
 package config
 
 import (
-    "html/template"
+	"html/template"
 )
 
 // compile all templates and cache them
