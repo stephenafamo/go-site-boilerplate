@@ -22,6 +22,6 @@ func (c *stephenRouter) handler(path string, controllerName string, method strin
 	theController := reflect.New(controller.Get(controllerName))
 	theMethod := theController.MethodByName(method)
 	c.HandleFunc(path, func(w http.ResponseWriter, r *http.Request) {
-		theMethod.Call([]reflect.Value{reflect.ValueOf(w), reflect.ValueOf(r)})
+		theMethod.Call([]reflect.Value{reflect.ValueOf(w), reflect.ValueOf(r), theController.Elem().FieldByName("Params")})
 	})
 }

@@ -9,6 +9,7 @@ import (
 
 type Controller struct {
 	Registry map[string]reflect.Type
+	Params map[string]interface{}
 }
 
 var controllers = make(map[string]reflect.Type)
