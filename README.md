@@ -16,4 +16,6 @@
 
 ### Using Docker (Optional)
 
-1. Create a start.sh
+1. Create a `.env` file using `.env.example` as a guide
+3. Create a settings file `settings.go` using `settings.go.example` as a guide. TemplateDirectory should be your resources directory (in `.env`)`/templates/*`. AssetBaseDirectory should be your resources directory (in `.env`)`/assets`.
+4. run `./start.sh`
