@@ -5,6 +5,7 @@ import (
 	"github.com/stephenafamo/site/config"
 	"net/http"
 	"reflect"
+	"html/template"
 )
 
 type Controller struct {
@@ -15,12 +16,14 @@ type Controller struct {
 var controllers = make(map[string]reflect.Type)
 
 func init() {
+	controllers["Controller"] = reflect.TypeOf(Controller{})
 	controllers["IndexController"] = reflect.TypeOf(IndexController{})
 	controllers["AssetController"] = reflect.TypeOf(AssetController{})
 }
 
 func (c *Controller) Render(w http.ResponseWriter, templateName string, p interface{}) {
-	if err := config.Templates.ExecuteTemplate(w, templateName, p); err != nil {
+	var Templates = template.Must(template.ParseGlob(config.GetS("TemplateDirectory")))
+	if err := Templates.ExecuteTemplate(w, templateName, p); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }

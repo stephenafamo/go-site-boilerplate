@@ -10,6 +10,7 @@ docker run -d -t \
 	-p 47852:80 \
     --net=crs_backend \
     --name=$app \
-    -v "$PWD"/src:/go/src/github.com/"$app" \
+    -v "$PWD"/site:/go/src/github.com/"$app"/site \
+    -v "$PWD"/resources:/var/www/stephenafamo \
     -w /go/src/github.com/"$app" \
     $app
