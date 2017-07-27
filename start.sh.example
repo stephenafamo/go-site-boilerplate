@@ -1,5 +1,5 @@
 #!/bin/bash
-app="stephenafamo"
+app="yourName"
 
 docker build -t $app .
 
@@ -11,6 +11,6 @@ docker run -d -t \
     --net=crs_backend \
     --name=$app \
     -v "$PWD"/site:/go/src/github.com/"$app"/site \
-    -v "$PWD"/resources:/var/www/stephenafamo \
+    -v "$PWD"/resources:/path/to/resources/ \
     -w /go/src/github.com/"$app" \
     $app

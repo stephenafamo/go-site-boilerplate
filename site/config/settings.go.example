@@ -1,5 +1,5 @@
 package config
 
 func setup() {
-	Settings["TemplateDirectory"] = Config{SValue: "/path/to/templates/*"}
+	Settings["TemplateDirectory"] = Config{SValue: "/path/to/resources/templates/*"}
 }
