@@ -2,4 +2,5 @@ package config
 
 func setup() {
 	Settings["TemplateDirectory"] = Config{SValue: "/path/to/resources/templates/*"}
+	Settings["AssetBaseFolder"] = Config{SValue: "/path/to/resources/assets"}
 }
