@@ -1,2 +1,3 @@
 .env
 rebuild.sh
+site/main_test.go

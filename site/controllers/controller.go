@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/stephenafamo/what-to-do/config"
+	"path/to/your/app/config"
 	"net/http"
 	"reflect"
 	"html/template"

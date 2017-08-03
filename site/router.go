@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/stephenafamo/what-to-do/controllers"
+	"path/to/your/app/controllers"
 	"net/http"
 	"reflect"
 )

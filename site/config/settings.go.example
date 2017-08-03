@@ -2,5 +2,6 @@ package config
 
 func setup() {
 	Settings["TemplateDirectory"] = Config{SValue: "/path/to/resources/templates/*"}
-	Settings["AssetBaseFolder"] = Config{SValue: "/path/to/resources/assets"}
+	Settings["AssetBaseFolder"] = Config{SValue: "/path/to/resources/assets"}	
+	Settings["dbconfig"] = Config{SValue: "user:password@/dbname?charset=utf8&parseTime=True&loc=Local"} // refer to https://github.com/go-sql-driver/mysql#usage
 }
