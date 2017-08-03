@@ -8,7 +8,7 @@ docker stop "$appName" && docker rm -f "$appName"
 docker run -d -t \
 	--restart=always \
 	-p "$appPort":80 \
-    --net=crs_backend \
+    --net="$dockerNetwork" \
     --name=$appName \
     -v "$PWD"/site:/go/src/"$appPath" \
     -v "$PWD"/resources:"$resourcesPath" \
