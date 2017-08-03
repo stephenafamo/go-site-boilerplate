@@ -12,5 +12,5 @@ docker run -d -t \
     --name=$appName \
     -v "$PWD"/site:/go/src/"$appPath" \
     -v "$PWD"/resources:"$resourcesPath" \
-    -w /go/src/github.com/"$appName" \
+    -w /go/src/"$appPath" \
     $appName

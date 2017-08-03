@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 	"reflect"
-	"github.com/stephenafamo/site/controllers"
+	"github.com/stephenafamo/what-to-do/controllers"
 )
 
 func TestAutoLoadControllers(t *testing.T) {

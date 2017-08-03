@@ -8,9 +8,9 @@ mkdir -p /var/log/http/ \
 
 go get "$appPath"
 go install "$appPath"
-site_pid=$(pidof site)
+site_pid=$(pidof "$appName")
 if [[ ! -z "$site_pid" ]] 
 	then
 	kill -9 "$site_pid"
 fi
-site > /var/log/http/access.log 2> /var/log/http/error.log 
+"$appName" > /var/log/http/access.log 2> /var/log/http/error.log 
